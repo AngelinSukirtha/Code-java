@@ -10,8 +10,8 @@ public class TestWork {
 		w.details(w.empName, (int) w.empId);
 		System.out.println(" ");
 		WorkB w1 = new WorkB();
-		w.getUserDetails();
-		w.printUserDetails();
+		w1.getUserDetails();
+		w1.printUserDetails();
 		w1.details(w1.empName, (int) w1.empId);
 	}
 
