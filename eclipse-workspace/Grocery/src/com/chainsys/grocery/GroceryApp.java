@@ -6,6 +6,20 @@ public class GroceryApp {
 	public double price;
 	public String category;
 	int quantity;
+	double discount;
+
+	public GroceryApp(double discount) {
+		super();
+		this.discount = discount;
+	}
+
+	public double getDiscount() {
+		return discount;
+	}
+
+	public void setDiscount(double discount) {
+		this.discount = discount;
+	}
 
 	public GroceryApp(int quantity) {
 		super();
@@ -46,8 +60,9 @@ public class GroceryApp {
 
 	@Override
 	public String toString() {
-		return "GroceryApp [quantity=" + quantity + ", getQuantity()=" + getQuantity() + ", getName()=" + getName()
-				+ ", getPrice()=" + getPrice() + ", getCategory()=" + getCategory() + "]";
+		return "GroceryApp [discount=" + discount + ", getDiscount()=" + getDiscount() + ", getQuantity()="
+				+ getQuantity() + ", getName()=" + getName() + ", getPrice()=" + getPrice() + ", getCategory()="
+				+ getCategory() + "]";
 	}
 
 	public GroceryApp(String name, double price, String category) {

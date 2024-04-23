@@ -7,6 +7,7 @@ public class TestApp {
 		app.getDetails();
 		app.categoryDetails();
 		app.priceDetails();
-		app.quantityDetails(app.price);
+		app.quantityDetails();
+		app.discount();
 	}
 }
