@@ -19,8 +19,8 @@ public class AppA {
 
 	public void categoryDetails() {
 		System.out.println(" ");
-		System.out.println("In GROCER'S CHOICE we have Fruits,Vegetables,Nuts,Stationery,Drinks,Grains");
-		System.out.println("CHOOSE YOUR CATEGORY");
+		System.out.println("IN GROCER'S CHOICE WE HAVE"+ "\n1.Fruits"+"\n2.Vegetables"+"\n3.Nuts"+"\n4.Stationery"+"\n5.Drinks"+"\n6.Grains");
+		System.out.println("CHOOSE YOUR CATEGORY FROM ABOVE");
 		Scanner sc = new Scanner(System.in);
 		String categoryInput = sc.nextLine();
 		String s2 = "^[a-zA-Z]+$";
@@ -352,14 +352,17 @@ public class AppA {
 			if (priceTotal > 1000) {
 				discount = 0.1 * priceTotal;
 				priceTotal -= discount;
+				System.out.println("Congradulations you get 10% discount");
 				System.out.println("Your price amount with discount is " + priceTotal);
 			} else if (priceTotal > 5000) {
 				discount = 0.3 * priceTotal;
 				priceTotal -= discount;
+				System.out.println("Congradulations you get 30% discount");
 				System.out.println("Your price amount with discount is " + priceTotal);
 			} else if (priceTotal > 10000) {
 				discount = 0.9 * priceTotal;
 				priceTotal -= discount;
+				System.out.println("Congradulations you get 90% discount");
 				System.out.println("Your price amount with discount is " + priceTotal);
 			} else {
 				System.out.println("No Discount");
