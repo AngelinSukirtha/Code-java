@@ -7,7 +7,7 @@ public class TestApp {
 		AppA app = new AppA();
 		//app.getDetails();
 		app.categoryDetails();
-		app.priceDetails();
+		//app.priceDetails();
 		app.quantityDetails();
 		app.discount();
 		System.out.println(" ");
