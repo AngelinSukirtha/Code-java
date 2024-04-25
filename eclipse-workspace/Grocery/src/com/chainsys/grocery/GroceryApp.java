@@ -9,7 +9,7 @@ public class GroceryApp {
 	double discount;
 
 	public GroceryApp(double discount) {
-		super();
+		
 		this.discount = discount;
 	}
 

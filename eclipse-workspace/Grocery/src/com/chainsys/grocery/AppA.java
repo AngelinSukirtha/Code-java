@@ -7,15 +7,10 @@ public class AppA {
 	public double price;
 	public double priceTotal;
 	public double discount;
-
-	/*
-	 * public void getDetails() { Scanner sc = new Scanner(System.in);
-	 * System.out.print("Enter item Name: "); String name = sc.nextLine(); String s1
-	 * = "^[a-zA-Z]+$";
-	 * 
-	 * while (true) { if (name.matches(s1)) { break; } else {
-	 * System.out.println("Enter the valid Data:"); name = sc.nextLine(); } } }
-	 */
+	public Object P;
+	public double priceTotal2;
+	public double totalPrice;
+	private double priceTotal1;
 
 	public void categoryDetails() {
 		System.out.println(" ");
@@ -24,23 +19,13 @@ public class AppA {
 		System.out.println("CHOOSE YOUR CATEGORY FROM ABOVE");
 		Scanner sc = new Scanner(System.in);
 		String categoryInput = sc.nextLine();
-		String s2 = "^[a-zA-Z]+$";
-		while (true) {
-			if (categoryInput.matches(s2)) {
-				this.category = categoryInput;
-				break;
-			} else {
-				System.out.println("Enter the valid Data:");
-				categoryInput = sc.nextLine();
-			}
-		}
+
 		switch (categoryInput) {
 		case "Fruits":
 			System.out.println(" ");
 			System.out.println("AVAILABLE ITEMS");
 			System.out.println(
 					"1.Apple" + "\n2.Orange" + "\n3.Grapes" + "\n4.Banana" + "\n5.Watermelon" + "\n6.PineApple");
-
 			itemInput();
 			break;
 		case "Vegetables":
@@ -51,13 +36,13 @@ public class AppA {
 			System.out.println("Enter the item you want:");
 			itemInput1();
 			break;
+
 		case "Nuts":
 			System.out.println(" ");
 			System.out.println("AVAILABLE ITEMS");
 			System.out.println(
 					"1.Almonds" + "\n2.Walnuts" + "\n3.Pecans" + "\n4.Cashews" + "\n5.Hazelnuts" + "\n6.Peanuts");
 			itemInput2();
-
 			break;
 
 		case "Stationery":
@@ -65,7 +50,6 @@ public class AppA {
 			System.out.println("1.Notebooks" + "\n2.Diaries" + "\n3.Pen" + "\n4.Pencils" + "\n5.Calculator"
 					+ "\n6.Punching Machine");
 			itemInput3();
-
 			break;
 
 		case "Drinks":
@@ -74,8 +58,8 @@ public class AppA {
 			System.out
 					.println("1.Coca-Cola" + "\n2.Pepsi" + "\n3.Limca" + "\n4.Sprite" + "\n5.Fanta" + "\n6.Appy Fizz");
 			itemInput4();
-
 			break;
+
 		case "Grains":
 			System.out.println(" ");
 			System.out.println("AVAILABLE ITEMS");
@@ -86,28 +70,28 @@ public class AppA {
 
 		default:
 			System.out.println(" ");
-			System.out.println("Not Available");
-			System.out.println("Enter the valid category[Type exactly how it shows]");
+			System.out.println("NOT AVAILABLE");
+			System.out.println("ENTER THE VALID CATEGORY[Type exactly how it shows]");
 			categoryDetails();
 			break;
 		}
 	}
 
-	private void itemInput5() {
+	public void itemInput5() {
 		// TODO Auto-generated method stub
-		System.out.println("Enter the item you want:");
+		System.out.println("ENTER THE ITEM YOU WANT:");
 		Scanner sc = new Scanner(System.in);
 		String itemInput5 = sc.nextLine();
 
 		switch (itemInput5) {
 		case "Wheat":
 			System.out.println("You chose wheat from the Grains category.");
-			price = 50;
+			price += 50;
 			System.out.println("Price is " + price);
 			break;
 		case "Oats":
 			System.out.println("You chose oats from the Grains category.");
-			price = 50;
+			price += 50;
 			System.out.println("Price is " + price);
 			break;
 		case "Rice":
@@ -137,15 +121,15 @@ public class AppA {
 			break;
 		default:
 			System.out.println("INVALID INPUT");
-			System.out.println("Enter the valid input[Type exactly how it shows]");
+			System.out.println("ENTER THE VALID INPUT[Type exactly how it shows]");
 			itemInput5();
 			break;
 		}
 	}
 
-	private void itemInput4() {
+	public void itemInput4() {
 		// TODO Auto-generated method stub
-		System.out.println("Enter the item you want:");
+		System.out.println("ENTER THE ITEM YOU WANT:");
 		Scanner sc = new Scanner(System.in);
 		String itemInput4 = sc.nextLine();
 
@@ -182,15 +166,15 @@ public class AppA {
 			break;
 		default:
 			System.out.println("INVALID INPUT");
-			System.out.println("Enter the valid input[Type exactly how it shows]");
+			System.out.println("ENTER THE VALID INPUT[Type exactly how it shows]");
 			itemInput4();
 			break;
 		}
 	}
 
-	private void itemInput3() {
+	public void itemInput3() {
 		// TODO Auto-generated method stub
-		System.out.println("Enter the item you want:");
+		System.out.println("ENTER THE ITEM YOU WANT:");
 		Scanner sc = new Scanner(System.in);
 		String itemInput3 = sc.nextLine();
 
@@ -227,15 +211,16 @@ public class AppA {
 			break;
 		default:
 			System.out.println("INVALID INPUT");
-			System.out.println("Enter the valid input[Type exactly how it shows]");
+			System.out.println("ENTER THE VALID INPUT[Type exactly how it shows]");
 			itemInput3();
 			break;
 		}
 	}
 
-	private void itemInput2() {
+	public void itemInput2() {
 		// TODO Auto-generated method stub
-		System.out.println("Enter the item you want:");
+
+		System.out.println("ENTER THE ITEM YOU WANT:");
 		Scanner sc = new Scanner(System.in);
 		String itemInput2 = sc.nextLine();
 
@@ -272,18 +257,19 @@ public class AppA {
 			break;
 		default:
 			System.out.println("INVALID INPUT");
-			System.out.println("Enter the valid input[Type exactly how it shows]");
+			System.out.println("ENTER THE VALID INPUT[Type exactly how it shows]");
 			itemInput2();
 			break;
 		}
 	}
 
-	private void itemInput1() {
+	public void itemInput1() {
 		// TODO Auto-generated method stub
-		System.out.println("Enter the item you want:");
+		System.out.println("ENTER THE ITEM YOU WANT:");
 		Scanner sc = new Scanner(System.in);
 		String itemInput1 = sc.nextLine();
 		itemInput1();
+
 		switch (itemInput1) {
 		case "Potato":
 			System.out.println("You chose potato from the Vegetables category.");
@@ -317,22 +303,24 @@ public class AppA {
 			break;
 		default:
 			System.out.println("INVALID INPUT");
-			System.out.println("Enter the valid input[Type exactly how it shows]");
+			System.out.println("ENTER THE VALID INPUT[Type exactly how it shows]");
 			itemInput1();
 			break;
 		}
 	}
 
-	private void itemInput() {
+	public void itemInput() {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the item you want:");
+		System.out.println("ENTER THE ITEM YOU WANT:");
 		String itemInput = sc.nextLine();
+
 		switch (itemInput) {
 		case "Apple":
 			System.out.println("You chose Apple from the Fruits category.");
 			price = 10;
 			System.out.println("Price is " + price);
+
 			break;
 		case "Orange":
 			System.out.println("You chose orange from the Fruits category.");
@@ -361,55 +349,99 @@ public class AppA {
 			break;
 		default:
 			System.out.println("INVALID INPUT");
-			System.out.println("Enter the valid input[Type exactly how it shows]");
+			System.out.println("ENTER THE VALID INPUT[Type exactly how it shows]");
 			itemInput();
 			break;
 		}
 	}
 
-	/*
-	 * public void priceDetails() { System.out.println(" ");
-	 * System.out.println("Enter the price"); Scanner sc = new Scanner(System.in);
-	 * price = sc.nextInt(); }
-	 */
-
 	public void quantityDetails() {
 		System.out.println(" ");
-		System.out.println("Enter the quantity");
+		System.out.println("ENTER THE QUANTITY");
 		Scanner sc = new Scanner(System.in);
-		int q = sc.nextInt();
+		double q = sc.nextInt();
 		while (true) {
 			if (q > 0) {
 				priceTotal = q * price;
 				System.out.println("Your price amount is " + priceTotal);
-				break;
+
 			} else {
-				System.out.println("Enter the valid Data:");
+				System.out.println("ENTER THE VALID DATA:");
 				q = sc.nextInt();
 			}
+			break;
+		}
+
+	}
+
+	public void moreItems() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Want to add more items? (y or n): ");
+		char choice = sc.next().charAt(0);
+		while (choice == 'y') {
+			categoryDetails();
+			quantityDetails1();
+			System.out.println("Want to add more items? (y or n): ");
+			choice = sc.next().charAt(0);
 		}
 	}
 
-	public void discount() {
-		if (priceTotal > 0) {
-			if (priceTotal > 1000) {
-				discount = 0.1 * priceTotal;
-				priceTotal -= discount;
-				System.out.println("Congradulations you get 10% discount");
-				System.out.println("Your price amount with discount is " + priceTotal);
-			} else if (priceTotal > 5000) {
-				discount = 0.3 * priceTotal;
-				priceTotal -= discount;
-				System.out.println("Congradulations you get 30% discount");
-				System.out.println("Your price amount with discount is " + priceTotal);
-			} else if (priceTotal > 10000) {
-				discount = 0.9 * priceTotal;
-				priceTotal -= discount;
-				System.out.println("Congradulations you get 90% discount");
-				System.out.println("Your price amount with discount is " + priceTotal);
+	public void quantityDetails1() {
+		// TODO Auto-generated method stub
+		System.out.println(" ");
+		System.out.println("ENTER THE QUANTITY");
+		Scanner sc = new Scanner(System.in);
+		double q = sc.nextInt();
+		while (true) {
+			if (q > 0) {
+				priceTotal1 = q * price;
+				System.out.println("Your price amount is " + priceTotal1);
+
+			} else {
+				System.out.println("ENTER THE VALID DATA:");
+				q = sc.nextInt();
+			}
+			break;
+		}
+	}
+
+	public double addPrice() {
+		totalPrice = priceTotal + priceTotal1;
+		System.out.println("Total Price: " + totalPrice);
+		return totalPrice;
+	}
+
+	public double discount() {
+		if (totalPrice > 0) {
+			if (totalPrice > 1000) {
+				discount = 0.1 * totalPrice;
+				priceTotal2 = totalPrice - discount;
+				System.out.println("Congradulations! you get 10% discount");
+				System.out.println("Your price amount with discount is " + priceTotal2);
+			} else if (totalPrice > 5000) {
+				discount = 0.3 * totalPrice;
+				priceTotal2 = totalPrice - discount;
+				System.out.println("Congradulations! you get 30% discount");
+				System.out.println("Your price amount with discount is " + priceTotal2);
+			} else if (totalPrice > 10000) {
+				discount = 0.9 * totalPrice;
+				priceTotal2 = totalPrice - discount;
+				System.out.println("Congradulations! you get 90% discount");
+				System.out.println("Your price amount with discount is " + priceTotal2);
 			} else {
 				System.out.println("No Discount");
 			}
 		}
+		return priceTotal2;
+	}
+
+	public void totalAmount() {
+		// TODO Auto-generated method stub
+		double sgst = priceTotal * 12 / 100;
+
+		System.out.println("\t\t\t\t\t\t\t\t\t" + "SGST (%): " + sgst);
+		double cgst = priceTotal * 12 / 100;
+		System.out.println("\t\t\t\t\t\t\t\t\t" + "CGST (%): " + cgst);
+		System.out.println("\t\t\t\t\t\t\t\t" + "Total Amount is: " + (priceTotal + cgst + sgst));
 	}
 }
