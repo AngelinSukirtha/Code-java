@@ -6,21 +6,26 @@ public class TestApp {
 	Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
+		System.out.println("\t\t\t" + "              LOGIN");
+		login app1 = new login();
+		app1.userName(null);
+		app1.password(null);
+		app1.phoneNo();
+		System.out.println(
+				"-------------------------------------------------------------------------------------------------");
 		System.out.println("\t\t" + "              WELCOME TO THE GROCER'S CHOICE");
 		System.out.println(" ");
 		System.out.println("Address:3/98 Anna Nagar,Chennai" + "\t\t\t\t\t\t" + "Contact:9443576543");
 		System.out.println("Opposite to KFC" + "\t\t\t\t\t\t\t\t" + "GSTIN: 03AWBPP8756K592");
-		login app1 = new login();
-		app1.userName(null);
-		app1.password(null);
 		AppA app = new AppA();
 		app.categoryDetails();
 		app.quantityDetails();
 		app.moreItems();
+		System.out.println(
+				"-------------------------------------------------------------------------------------------------");
 		app.discount();
 		app.totalAmount();
 		System.out.println(" ");
 		System.out.println("\t\t" + "              THANK YOU!! COME AGAIN");
 	}
-
 }

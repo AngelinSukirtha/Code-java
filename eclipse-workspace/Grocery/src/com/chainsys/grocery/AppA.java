@@ -34,7 +34,6 @@ public class AppA {
 			System.out.println("AVAILABLE ITEMS");
 			System.out
 					.println("1.Potato" + "\n2.Tomato" + "\n3.Onion" + "\n4.Carrot" + "\n5.Beetroot" + "\n6.Broccoli");
-			System.out.println("Enter the item you want:");
 			itemInput1();
 			break;
 
@@ -258,7 +257,6 @@ public class AppA {
 	public void itemInput1() {
 		System.out.println("ENTER THE ITEM YOU WANT:");
 		String itemInput1 = sc.nextLine();
-		itemInput1();
 
 		switch (itemInput1) {
 		case "Potato":
@@ -362,12 +360,12 @@ public class AppA {
 	}
 
 	public void moreItems() {
-		System.out.println("Want to add more items? (y or n): ");
+		System.out.println("Want to add more items? [y for yes (or) n for no]: ");
 		char choice = sc.next().charAt(0);
 		while (choice == 'y') {
 			categoryDetails();
 			quantityDetails();
-			System.out.println("Want to add more items? (y or n): ");
+			System.out.println("Want to add more items? [y for yes (or) n for no]: ");
 			choice = sc.next().charAt(0);
 		}
 	}
@@ -390,9 +388,11 @@ public class AppA {
 				System.out.println("Congradulations! you get 90% discount");
 				System.out.println("Your price amount with discount is " + priceTotal2);
 			} else {
-				System.out.println("No Discount");
+				priceTotal2 = priceTotal - discount;
+				System.out.println("NO DISCOUNT!!");
 			}
 		}
+		System.out.println("\t\t\t\t\t\t\t\t" + "     " + "Final price: " + priceTotal2);
 		return priceTotal2;
 	}
 
@@ -401,6 +401,6 @@ public class AppA {
 		System.out.println("\t\t\t\t\t\t\t\t\t" + "SGST (%): " + sgst);
 		double cgst = priceTotal2 * 12 / 100;
 		System.out.println("\t\t\t\t\t\t\t\t\t" + "CGST (%): " + cgst);
-		System.out.println("\t\t\t\t\t\t\t\t" + "Total Amount is: " + (priceTotal2 + cgst + sgst));
+		System.out.println("\t\t\t\t\t\t\t\t" + "    " + "Total Amount: " + (priceTotal2 + cgst + sgst));
 	}
 }
