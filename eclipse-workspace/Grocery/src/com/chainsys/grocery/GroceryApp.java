@@ -1,15 +1,89 @@
 package com.chainsys.grocery;
 
-public class GroceryApp {
+import java.util.Scanner;
 
+public class GroceryApp {
+	Scanner sc = new Scanner(System.in);
 	public String name;
 	public double price;
 	public String category;
 	int quantity;
 	double discount;
+	public double priceTotal;
+	public Object P;
+	public double priceTotal2;
+	public double totalPrice;
+	public double priceTotal1;
+	public String userName;
+	public String password;
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public GroceryApp(double priceTotal, Object p, double priceTotal2, double totalPrice, double priceTotal1) {
+		super();
+		this.priceTotal = priceTotal;
+		P = p;
+		this.priceTotal2 = priceTotal2;
+		this.totalPrice = totalPrice;
+		this.priceTotal1 = priceTotal1;
+	}
+
+	public double getPriceTotal() {
+		return priceTotal;
+	}
+
+	public void setPriceTotal(double priceTotal) {
+		this.priceTotal = priceTotal;
+	}
+
+	public Object getP() {
+		return P;
+	}
+
+	public void setP(Object p) {
+		P = p;
+	}
+
+	public double getPriceTotal2() {
+		return priceTotal2;
+	}
+
+	public void setPriceTotal2(double priceTotal2) {
+		this.priceTotal2 = priceTotal2;
+	}
+
+	public double getTotalPrice() {
+		return totalPrice;
+	}
+
+	public void setTotalPrice(double totalPrice) {
+		this.totalPrice = totalPrice;
+	}
+
+	public double getPriceTotal1() {
+		return priceTotal1;
+	}
+
+	public void setPriceTotal1(double priceTotal1) {
+		this.priceTotal1 = priceTotal1;
+	}
 
 	public GroceryApp(double discount) {
-		
+
 		this.discount = discount;
 	}
 
@@ -60,7 +134,10 @@ public class GroceryApp {
 
 	@Override
 	public String toString() {
-		return "GroceryApp [discount=" + discount + ", getDiscount()=" + getDiscount() + ", getQuantity()="
+		return "GroceryApp [priceTotal=" + priceTotal + ", P=" + P + ", priceTotal2=" + priceTotal2 + ", totalPrice="
+				+ totalPrice + ", priceTotal1=" + priceTotal1 + ", getPriceTotal()=" + getPriceTotal() + ", getP()="
+				+ getP() + ", getPriceTotal2()=" + getPriceTotal2() + ", getTotalPrice()=" + getTotalPrice()
+				+ ", getPriceTotal1()=" + getPriceTotal1() + ", getDiscount()=" + getDiscount() + ", getQuantity()="
 				+ getQuantity() + ", getName()=" + getName() + ", getPrice()=" + getPrice() + ", getCategory()="
 				+ getCategory() + "]";
 	}

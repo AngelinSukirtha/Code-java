@@ -10,14 +10,14 @@ public class AppA {
 	public Object P;
 	public double priceTotal2;
 	public double totalPrice;
-	private double priceTotal1;
+	public double priceTotal1;
+	Scanner sc = new Scanner(System.in);
 
 	public void categoryDetails() {
 		System.out.println(" ");
 		System.out.println("IN GROCER'S CHOICE WE HAVE" + "\n1.Fruits" + "\n2.Vegetables" + "\n3.Nuts"
 				+ "\n4.Stationery" + "\n5.Drinks" + "\n6.Grains");
 		System.out.println("CHOOSE YOUR CATEGORY FROM ABOVE");
-		Scanner sc = new Scanner(System.in);
 		String categoryInput = sc.nextLine();
 
 		switch (categoryInput) {
@@ -28,6 +28,7 @@ public class AppA {
 					"1.Apple" + "\n2.Orange" + "\n3.Grapes" + "\n4.Banana" + "\n5.Watermelon" + "\n6.PineApple");
 			itemInput();
 			break;
+
 		case "Vegetables":
 			System.out.println(" ");
 			System.out.println("AVAILABLE ITEMS");
@@ -78,20 +79,18 @@ public class AppA {
 	}
 
 	public void itemInput5() {
-		// TODO Auto-generated method stub
 		System.out.println("ENTER THE ITEM YOU WANT:");
-		Scanner sc = new Scanner(System.in);
 		String itemInput5 = sc.nextLine();
 
 		switch (itemInput5) {
 		case "Wheat":
 			System.out.println("You chose wheat from the Grains category.");
-			price += 50;
+			price = 50;
 			System.out.println("Price is " + price);
 			break;
 		case "Oats":
 			System.out.println("You chose oats from the Grains category.");
-			price += 50;
+			price = 50;
 			System.out.println("Price is " + price);
 			break;
 		case "Rice":
@@ -128,9 +127,7 @@ public class AppA {
 	}
 
 	public void itemInput4() {
-		// TODO Auto-generated method stub
 		System.out.println("ENTER THE ITEM YOU WANT:");
-		Scanner sc = new Scanner(System.in);
 		String itemInput4 = sc.nextLine();
 
 		switch (itemInput4) {
@@ -173,9 +170,7 @@ public class AppA {
 	}
 
 	public void itemInput3() {
-		// TODO Auto-generated method stub
 		System.out.println("ENTER THE ITEM YOU WANT:");
-		Scanner sc = new Scanner(System.in);
 		String itemInput3 = sc.nextLine();
 
 		switch (itemInput3) {
@@ -218,10 +213,7 @@ public class AppA {
 	}
 
 	public void itemInput2() {
-		// TODO Auto-generated method stub
-
 		System.out.println("ENTER THE ITEM YOU WANT:");
-		Scanner sc = new Scanner(System.in);
 		String itemInput2 = sc.nextLine();
 
 		switch (itemInput2) {
@@ -264,9 +256,7 @@ public class AppA {
 	}
 
 	public void itemInput1() {
-		// TODO Auto-generated method stub
 		System.out.println("ENTER THE ITEM YOU WANT:");
-		Scanner sc = new Scanner(System.in);
 		String itemInput1 = sc.nextLine();
 		itemInput1();
 
@@ -310,8 +300,6 @@ public class AppA {
 	}
 
 	public void itemInput() {
-		// TODO Auto-generated method stub
-		Scanner sc = new Scanner(System.in);
 		System.out.println("ENTER THE ITEM YOU WANT:");
 		String itemInput = sc.nextLine();
 
@@ -358,11 +346,10 @@ public class AppA {
 	public void quantityDetails() {
 		System.out.println(" ");
 		System.out.println("ENTER THE QUANTITY");
-		Scanner sc = new Scanner(System.in);
 		double q = sc.nextInt();
 		while (true) {
 			if (q > 0) {
-				priceTotal = q * price;
+				priceTotal = priceTotal + (q * price);
 				System.out.println("Your price amount is " + priceTotal);
 
 			} else {
@@ -375,57 +362,31 @@ public class AppA {
 	}
 
 	public void moreItems() {
-		Scanner sc = new Scanner(System.in);
 		System.out.println("Want to add more items? (y or n): ");
 		char choice = sc.next().charAt(0);
 		while (choice == 'y') {
 			categoryDetails();
-			quantityDetails1();
+			quantityDetails();
 			System.out.println("Want to add more items? (y or n): ");
 			choice = sc.next().charAt(0);
 		}
 	}
 
-	public void quantityDetails1() {
-		// TODO Auto-generated method stub
-		System.out.println(" ");
-		System.out.println("ENTER THE QUANTITY");
-		Scanner sc = new Scanner(System.in);
-		double q = sc.nextInt();
-		while (true) {
-			if (q > 0) {
-				priceTotal1 = q * price;
-				System.out.println("Your price amount is " + priceTotal1);
-
-			} else {
-				System.out.println("ENTER THE VALID DATA:");
-				q = sc.nextInt();
-			}
-			break;
-		}
-	}
-
-	public double addPrice() {
-		totalPrice = priceTotal + priceTotal1;
-		System.out.println("Total Price: " + totalPrice);
-		return totalPrice;
-	}
-
 	public double discount() {
-		if (totalPrice > 0) {
-			if (totalPrice > 1000) {
-				discount = 0.1 * totalPrice;
-				priceTotal2 = totalPrice - discount;
+		if (priceTotal > 0) {
+			if (priceTotal > 1000) {
+				discount = 0.1 * priceTotal;
+				priceTotal2 = priceTotal - discount;
 				System.out.println("Congradulations! you get 10% discount");
 				System.out.println("Your price amount with discount is " + priceTotal2);
-			} else if (totalPrice > 5000) {
-				discount = 0.3 * totalPrice;
-				priceTotal2 = totalPrice - discount;
+			} else if (priceTotal > 5000) {
+				discount = 0.3 * priceTotal;
+				priceTotal2 = priceTotal - discount;
 				System.out.println("Congradulations! you get 30% discount");
 				System.out.println("Your price amount with discount is " + priceTotal2);
-			} else if (totalPrice > 10000) {
-				discount = 0.9 * totalPrice;
-				priceTotal2 = totalPrice - discount;
+			} else if (priceTotal > 10000) {
+				discount = 0.9 * priceTotal;
+				priceTotal2 = priceTotal - discount;
 				System.out.println("Congradulations! you get 90% discount");
 				System.out.println("Your price amount with discount is " + priceTotal2);
 			} else {
@@ -436,12 +397,10 @@ public class AppA {
 	}
 
 	public void totalAmount() {
-		// TODO Auto-generated method stub
-		double sgst = priceTotal * 12 / 100;
-
+		double sgst = priceTotal2 * 12 / 100;
 		System.out.println("\t\t\t\t\t\t\t\t\t" + "SGST (%): " + sgst);
-		double cgst = priceTotal * 12 / 100;
+		double cgst = priceTotal2 * 12 / 100;
 		System.out.println("\t\t\t\t\t\t\t\t\t" + "CGST (%): " + cgst);
-		System.out.println("\t\t\t\t\t\t\t\t" + "Total Amount is: " + (priceTotal + cgst + sgst));
+		System.out.println("\t\t\t\t\t\t\t\t" + "Total Amount is: " + (priceTotal2 + cgst + sgst));
 	}
 }
