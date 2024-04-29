@@ -3,10 +3,8 @@ package com.chainsys.grocery;
 import java.util.Scanner;
 
 public class Login {
-	public String userName;
-	public String password;
-	public String phoneNo;
 	Scanner sc = new Scanner(System.in);
+	GroceryApp ga = new GroceryApp();
 
 	public String userName(String userName) {
 		while (true) {
@@ -23,13 +21,13 @@ public class Login {
 	public String phoneNo() {
 		while (true) {
 			System.out.println("Enter your phone number: ");
-			phoneNo = sc.nextLine();
-			if (phoneNo.matches("^\\d{10}$"))
+			ga.phoneNo = sc.nextLine();
+			if (ga.phoneNo.matches("^\\d{10}$"))
 				break;
 			else
 				System.out.println("INVALID PHONE NUMBER\n");
 		}
-		return phoneNo;
+		return ga.phoneNo;
 	}
 
 	public String password(String password) {
