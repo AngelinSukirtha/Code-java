@@ -20,13 +20,11 @@ public class TestApp {
 		AppA app = new AppA();
 		app.categoryDetails();
 		app.quantityDetails();
-		// app.moreItems();
-		TotalAmount app2 = new TotalAmount();
-		app2.moreItems();
+		app.moreItems();
 		System.out.println(
 				"-------------------------------------------------------------------------------------------------");
-		app2.discount();
-		app2.totalAmount();
+		app.discount();
+		app.totalAmount();
 		System.out.println(" ");
 		System.out.println("\t\t" + "              THANK YOU!! COME AGAIN");
 	}

@@ -17,9 +17,4 @@ public interface App {
 
 	public void quantityDetails();
 
-//	public void moreItems();
-//
-//	public double discount();
-//
-//	public void totalAmount();
 }
