@@ -2,17 +2,10 @@ package com.chainsys.grocery;
 
 import java.util.Scanner;
 
-public class AppA extends Items implements App  {
-	public String category;
-	public double price;
-	public double priceTotal;
-	public double discount;
-	public Object P;
-	public double priceTotal2;
-	public double totalPrice;
-	public double priceTotal1;
+public class AppA extends Items implements App {
+
 	Scanner sc = new Scanner(System.in);
-	GroceryApp ga = new GroceryApp(price);
+	GroceryApp ga = new GroceryApp();
 
 	public void categoryDetails() {
 		System.out.println(" ");
@@ -85,38 +78,38 @@ public class AppA extends Items implements App  {
 		switch (itemInput5) {
 		case "Wheat":
 			System.out.println("You chose wheat from the Grains category.");
-			price = 50;
-			System.out.println("Price is " + price);
+			ga.price = 50;
+			System.out.println("Price is " + ga.price);
 			break;
 		case "Oats":
 			System.out.println("You chose oats from the Grains category.");
-			price = 50;
-			System.out.println("Price is " + price);
+			ga.price = 50;
+			System.out.println("Price is " + ga.price);
 			break;
 		case "Rice":
 			System.out.println("You chose rice from the Grains category.");
-			price = 60;
-			System.out.println("Price is " + price);
+			ga.price = 60;
+			System.out.println("Price is " + ga.price);
 			break;
 		case "Corn":
 			System.out.println("You chose corn from the Grains category.");
-			price = 20;
-			System.out.println("Price is " + price);
+			ga.price = 20;
+			System.out.println("Price is " + ga.price);
 			break;
 		case "Barley":
 			System.out.println("You chose barley from the Grains category.");
-			price = 30;
-			System.out.println("Price is " + price);
+			ga.price = 30;
+			System.out.println("Price is " + ga.price);
 			break;
 		case "Sorghum":
 			System.out.println("You chose sorghum from the Grains category.");
-			price = 30;
-			System.out.println("Price is " + price);
+			ga.price = 30;
+			System.out.println("Price is " + ga.price);
 			break;
 		case "Millet":
 			System.out.println("You chose millet from the Grains category.");
-			price = 25;
-			System.out.println("Price is " + price);
+			ga.price = 25;
+			System.out.println("Price is " + ga.price);
 			break;
 		default:
 			System.out.println("INVALID INPUT");
@@ -133,33 +126,33 @@ public class AppA extends Items implements App  {
 		switch (itemInput4) {
 		case "Coca-Cola":
 			System.out.println("You chose Coca-Cola from the Drinks category.");
-			price = 25;
-			System.out.println("Price is " + price);
+			ga.price = 25;
+			System.out.println("Price is " + ga.price);
 			break;
 		case "Pepsi":
 			System.out.println("You chose Pepsi from the Drinks category.");
-			price = 30;
-			System.out.println("Price is " + price);
+			ga.price = 30;
+			System.out.println("Price is " + ga.price);
 			break;
 		case "Limca":
 			System.out.println("You chose Limca from the Drinks category.");
-			price = 15;
-			System.out.println("Price is " + price);
+			ga.price = 15;
+			System.out.println("Price is " + ga.price);
 			break;
 		case "Sprite":
 			System.out.println("You chose Sprite from the Drinks category.");
-			price = 35;
-			System.out.println("Price is " + price);
+			ga.price = 35;
+			System.out.println("Price is " + ga.price);
 			break;
 		case "Fanta":
 			System.out.println("You chose Fanta from the Drinks category.");
-			price = 25;
-			System.out.println("Price is " + price);
+			ga.price = 25;
+			System.out.println("Price is " + ga.price);
 			break;
 		case "Appy Fizz":
 			System.out.println("You chose Appy Fizz from the Drinks category.");
-			price = 30;
-			System.out.println("Price is " + price);
+			ga.price = 30;
+			System.out.println("Price is " + ga.price);
 			break;
 		default:
 			System.out.println("INVALID INPUT");
@@ -176,33 +169,33 @@ public class AppA extends Items implements App  {
 		switch (itemInput3) {
 		case "Notebooks":
 			System.out.println("You chose notebooks from the Stationery category.");
-			price = 50;
-			System.out.println("Price is " + price);
+			ga.price = 50;
+			System.out.println("Price is " + ga.price);
 			break;
 		case "Diaries":
 			System.out.println("You chose diaries from the Stationery category.");
-			price = 200;
-			System.out.println("Price is " + price);
+			ga.price = 200;
+			System.out.println("Price is " + ga.price);
 			break;
 		case "Pen":
 			System.out.println("You chose pen from the Stationery category.");
-			price = 20;
-			System.out.println("Price is " + price);
+			ga.price = 20;
+			System.out.println("Price is " + ga.price);
 			break;
 		case "Pencils":
 			System.out.println("You chose pencils from the Stationery category.");
-			price = 5;
-			System.out.println("Price is " + price);
+			ga.price = 5;
+			System.out.println("Price is " + ga.price);
 			break;
 		case "Calculator":
 			System.out.println("You chose calculator from the Stationery category.");
-			price = 500;
-			System.out.println("Price is " + price);
+			ga.price = 500;
+			System.out.println("Price is " + ga.price);
 			break;
 		case "Punching Machine":
 			System.out.println("You chose punching machine from the Stationery category.");
-			price = 600;
-			System.out.println("Price is " + price);
+			ga.price = 600;
+			System.out.println("Price is " + ga.price);
 			break;
 		default:
 			System.out.println("INVALID INPUT");
@@ -219,33 +212,33 @@ public class AppA extends Items implements App  {
 		switch (itemInput2) {
 		case "Almonds":
 			System.out.println("You chose almonds from the Nuts category.");
-			price = 4;
-			System.out.println("Price is " + price);
+			ga.price = 4;
+			System.out.println("Price is " + ga.price);
 			break;
 		case "Walnuts":
 			System.out.println("You chose walnuts from the Nuts category.");
-			price = 5;
-			System.out.println("Price is " + price);
+			ga.price = 5;
+			System.out.println("Price is " + ga.price);
 			break;
 		case "Pecans":
 			System.out.println("You chose pecans from the Nuts category.");
-			price = 3;
-			System.out.println("Price is " + price);
+			ga.price = 3;
+			System.out.println("Price is " + ga.price);
 			break;
 		case "Cashews":
 			System.out.println("You chose cashews from the Nuts category.");
-			price = 8;
-			System.out.println("Price is " + price);
+			ga.price = 8;
+			System.out.println("Price is " + ga.price);
 			break;
 		case "Hazelnuts":
 			System.out.println("You chose hazelnut from the Nuts category.");
-			price = 10;
-			System.out.println("Price is " + price);
+			ga.price = 10;
+			System.out.println("Price is " + ga.price);
 			break;
 		case "Peanuts":
 			System.out.println("You chose peanuts from the Nuts category.");
-			price = 3;
-			System.out.println("Price is " + price);
+			ga.price = 3;
+			System.out.println("Price is " + ga.price);
 			break;
 		default:
 			System.out.println("INVALID INPUT");
@@ -262,33 +255,33 @@ public class AppA extends Items implements App  {
 		switch (itemInput1) {
 		case "Potato":
 			System.out.println("You chose potato from the Vegetables category.");
-			price = 10;
-			System.out.println("Price is " + price);
+			ga.price = 10;
+			System.out.println("Price is " + ga.price);
 			break;
 		case "Tomato":
 			System.out.println("You chose tomato from the Vegetables category.");
-			price = 5;
-			System.out.println("Price is " + price);
+			ga.price = 5;
+			System.out.println("Price is " + ga.price);
 			break;
 		case "Onion":
 			System.out.println("You chose onion from the Vegetables category.");
-			price = 6;
-			System.out.println("Price is " + price);
+			ga.price = 6;
+			System.out.println("Price is " + ga.price);
 			break;
 		case "Carrot":
 			System.out.println("You chose carrot from the Vegetables category.");
-			price = 8;
-			System.out.println("Price is " + price);
+			ga.price = 8;
+			System.out.println("Price is " + ga.price);
 			break;
 		case "Beetroot":
 			System.out.println("You chose beetroot from the Vegetables category.");
-			price = 10;
-			System.out.println("Price is " + price);
+			ga.price = 10;
+			System.out.println("Price is " + ga.price);
 			break;
 		case "Broccoli":
 			System.out.println("You chose broccoli from the Vegetables category.");
-			price = 12;
-			System.out.println("Price is " + price);
+			ga.price = 12;
+			System.out.println("Price is " + ga.price);
 			break;
 		default:
 			System.out.println("INVALID INPUT");
@@ -305,34 +298,34 @@ public class AppA extends Items implements App  {
 		switch (itemInput) {
 		case "Apple":
 			System.out.println("You chose Apple from the Fruits category.");
-			price = 10;
-			System.out.println("Price is " + price);
+			ga.price = 10;
+			System.out.println("Price is " + ga.price);
 
 			break;
 		case "Orange":
 			System.out.println("You chose orange from the Fruits category.");
-			price = 12;
-			System.out.println("Price is " + price);
+			ga.price = 12;
+			System.out.println("Price is " + ga.price);
 			break;
 		case "Grapes":
 			System.out.println("You chose grapes from the Fruits category.");
-			price = 15;
-			System.out.println("Price is " + price);
+			ga.price = 15;
+			System.out.println("Price is " + ga.price);
 			break;
 		case "Banana":
 			System.out.println("You chose banana from the Fruits category.");
-			price = 6;
-			System.out.println("Price is " + price);
+			ga.price = 6;
+			System.out.println("Price is " + ga.price);
 			break;
 		case "Watermelon":
 			System.out.println("You chose Watermelon from the Fruits category.");
-			price = 30;
-			System.out.println("Price is " + price);
+			ga.price = 30;
+			System.out.println("Price is " + ga.price);
 			break;
 		case "PineApple":
 			System.out.println("You chose pineapple from the Fruits category.");
-			price = 40;
-			System.out.println("Price is " + price);
+			ga.price = 40;
+			System.out.println("Price is " + ga.price);
 			break;
 		default:
 			System.out.println("INVALID INPUT");
@@ -348,8 +341,8 @@ public class AppA extends Items implements App  {
 		double q = sc.nextInt();
 		while (true) {
 			if (q > 0) {
-				priceTotal = priceTotal + (q * price);
-				System.out.println("Your price amount is " + priceTotal);
+				ga.priceTotal = ga.priceTotal + (q * ga.price);
+				System.out.println("Your price amount is " + ga.priceTotal);
 
 			} else {
 				System.out.println("ENTER THE VALID DATA:");
@@ -372,36 +365,36 @@ public class AppA extends Items implements App  {
 	}
 
 	public double discount() {
-		if (priceTotal > 0) {
-			if (priceTotal > 1000) {
-				discount = 0.1 * priceTotal;
-				priceTotal2 = priceTotal - discount;
+		if (ga.priceTotal > 0) {
+			if (ga.priceTotal > 1000) {
+				ga.discount = 0.1 * ga.priceTotal;
+				ga.priceTotal2 = ga.priceTotal - ga.discount;
 				System.out.println("Congradulations! you get 10% discount");
-				System.out.println("Your price amount with discount is " + priceTotal2);
-			} else if (priceTotal > 5000) {
-				discount = 0.3 * priceTotal;
-				priceTotal2 = priceTotal - discount;
+				System.out.println("Your price amount with discount is " + ga.priceTotal2);
+			} else if (ga.priceTotal > 5000) {
+				ga.discount = 0.3 * ga.priceTotal;
+				ga.priceTotal2 = ga.priceTotal - ga.discount;
 				System.out.println("Congradulations! you get 30% discount");
-				System.out.println("Your price amount with discount is " + priceTotal2);
-			} else if (priceTotal > 10000) {
-				discount = 0.9 * priceTotal;
-				priceTotal2 = priceTotal - discount;
+				System.out.println("Your price amount with discount is " + ga.priceTotal2);
+			} else if (ga.priceTotal > 10000) {
+				ga.discount = 0.9 * ga.priceTotal;
+				ga.priceTotal2 = ga.priceTotal - ga.discount;
 				System.out.println("Congradulations! you get 90% discount");
-				System.out.println("Your price amount with discount is " + priceTotal2);
+				System.out.println("Your price amount with discount is " + ga.priceTotal2);
 			} else {
-				priceTotal2 = priceTotal - discount;
+				ga.priceTotal2 = ga.priceTotal - ga.discount;
 				System.out.println("NO DISCOUNT!!");
 			}
 		}
-		System.out.println("\t\t\t\t\t\t\t\t" + "     " + "Final price: " + priceTotal2);
-		return priceTotal2;
+		System.out.println("\t\t\t\t\t\t\t\t" + "     " + "Final price: " + ga.priceTotal2);
+		return ga.priceTotal2;
 	}
 
 	public void totalAmount() {
-		double sgst = priceTotal2 * 12 / 100;
+		double sgst = ga.priceTotal2 * 12 / 100;
 		System.out.println("\t\t\t\t\t\t\t\t\t" + "SGST (%): " + sgst);
-		double cgst = priceTotal2 * 12 / 100;
+		double cgst = ga.priceTotal2 * 12 / 100;
 		System.out.println("\t\t\t\t\t\t\t\t\t" + "CGST (%): " + cgst);
-		System.out.println("\t\t\t\t\t\t\t\t" + "    " + "Total Amount: " + (priceTotal2 + cgst + sgst));
+		System.out.println("\t\t\t\t\t\t\t\t" + "    " + "Total Amount: " + (ga.priceTotal2 + cgst + sgst));
 	}
 }
