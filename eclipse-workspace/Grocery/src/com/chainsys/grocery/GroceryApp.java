@@ -10,12 +10,12 @@ public class GroceryApp {
 	int quantity;
 	double discount;
 	public double priceTotal;
-	public Object P;
 	public double priceTotal2;
 	public double totalPrice;
 	public double priceTotal1;
 	public String userName;
 	public String password;
+	public Object P;
 
 	public String getUserName() {
 		return userName;

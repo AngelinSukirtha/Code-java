@@ -7,7 +7,7 @@ public class TestApp {
 
 	public static void main(String[] args) {
 		System.out.println("\t\t\t" + "              LOGIN");
-		login app1 = new login();
+		Login app1 = new Login();
 		app1.userName(null);
 		app1.password(null);
 		app1.phoneNo();
@@ -16,15 +16,17 @@ public class TestApp {
 		System.out.println("\t\t" + "              WELCOME TO THE GROCER'S CHOICE");
 		System.out.println(" ");
 		System.out.println("Address:3/98 Anna Nagar,Chennai" + "\t\t\t\t\t\t" + "Contact:9443576543");
-		System.out.println("Opposite to KFC" + "\t\t\t\t\t\t\t\t" + "GSTIN: 03AWBPP8756K592");
+		System.out.println("Opposite to KFC" + "\t\t\t\t\t\t\t\t" + "GSTIN: 00AWBPP1234K123");
 		AppA app = new AppA();
 		app.categoryDetails();
 		app.quantityDetails();
-		app.moreItems();
+		// app.moreItems();
+		TotalAmount app2 = new TotalAmount();
+		app2.moreItems();
 		System.out.println(
 				"-------------------------------------------------------------------------------------------------");
-		app.discount();
-		app.totalAmount();
+		app2.discount();
+		app2.totalAmount();
 		System.out.println(" ");
 		System.out.println("\t\t" + "              THANK YOU!! COME AGAIN");
 	}
